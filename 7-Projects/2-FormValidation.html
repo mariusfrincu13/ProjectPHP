@@ -1,0 +1,55 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <script>
+        function checkFormData(){
+            var message = "";
+
+            //Access text box
+            var name = document.getElementById("name").value;
+            var email = document.getElementById("email").value;
+            var age = document.getElementById("age").value;
+
+            //Access Radio
+            var radio1 = document.getElementById("radio1").checked;
+            var radio2 = document.getElementById("radio2").checked;
+
+            //Access Checkbox
+            var check = document.getElementById("check").checked;
+
+            message += "Name: " + name + "<br>";
+            message += "Email: " + email + "<br>";
+            message += "Age: " + age + "<br>";
+            message += "Male: "+radio1+"<br>";
+            message += "Female: "+radio2+"<br>";
+            message += "Agreed: "+check+"<br>";
+
+            document.getElementById("message").innerHTML = message;
+        }
+    </script>
+</head>
+<body>
+    <p id="message"></p>
+    <h1>Form Validations</h1>
+
+    <form action="https://youtube.com" method="get">
+        <label for="name">Your Name:</label>
+        <input type="text" id="name" name="name"> <br><br>
+        <label for="email">Your Email:</label>
+        <input type="email" id="email" name="email"> <br><br>
+        <label for="age">Your Age:</label>
+        <input type="number" id="age" name="age"> <br><br>
+        Male <input type="radio" name="gender" id="radio1" checked>
+        Female <input type="radio" name="gender" id="radio2"><br><br>
+
+        <input type="checkbox" id="check"/> Agree to our Terms <br>
+        <br>
+        <input type="button" name="submit" value="Submit" onclick="checkFormData();"/>
+    </form>
+</body>
+</html>
