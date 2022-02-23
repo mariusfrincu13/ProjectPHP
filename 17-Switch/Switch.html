@@ -1,0 +1,45 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Internal JS</title>
+    <script>
+        var day = prompt("Enter the Day: ");
+        var result;
+        day = day.toLowerCase();
+
+        switch (day) {
+            case 'monday':
+                result = "First Day";
+                break;
+            case 'tuesday':
+                result = "Second Day";
+                break;
+            case 'wednesday':
+                result = "Third Day";
+                break;
+            case 'thursday':
+                result = "Fourth Day";
+                break;
+            case 'friday':
+                result = "Friday";
+                break;
+            case 'saturday':
+                result = "Sat";
+                break;
+            case 'sunday':
+                result = "sun";
+                break;
+        }
+    </script>
+</head>
+<body>
+    <h1>Heading</h1>
+    <script>
+        document.write(result);
+    </script>
+</body>
+</html>
